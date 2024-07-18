@@ -113,6 +113,18 @@ int Gi2
  ipv6 address autoconfig
  do sh ipv6 int brief
 
+
+config t
+ipv6 Unicast-routing
+int Gi2
+ ipv6 enable
+ ipv6 address autoconfig
+ ipv6 address face:cafe:aced:dace::/64 eui-64
+ ipv6 address b00b:b0b0:caca:dada::/64 eui-64
+ ipv6 address baba:b2b2:caad:daad::/64 eui-64
+ do sh ipv6 int brief
+
+
 Method 2: Extended UserID/EUI-64 Methid: 50% ikaw, 50% Automatic
 config t
 ipv6 Unicast-routing
