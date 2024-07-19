@@ -73,7 +73,7 @@ ip route 0.0.0.0  0.0.0.0 10.m.1.4
 ipv6  route  ::/0   face:cafe:face:cafe::aaaa
 
 config t
-   hostname COREtaas_
+   hostname COREtaas31
    enable secret pass
    service password-encryption
    no logging console
@@ -88,19 +88,19 @@ config t
       exec-timeout 0 0
    Int Vlan 1
      no shutdown
-	 ip add 10._.1.2 255.255.255.0
+	 ip add 10.31.1.2 255.255.255.0
 	 description MGMTDATA
    Int Vlan 10
      no shutdown
-	 ip add 10._.10.2 255.255.255.0
+	 ip add 10.31.10.2 255.255.255.0
 	 description WIRELESS
    Int Vlan 50
      no shutdown
-	 ip add 10._.50.2 255.255.255.0
+	 ip add 10.31.50.2 255.255.255.0
 	 description IPCCTV
    Int Vlan 100
      no shutdown
-	 ip add 10._.100.2 255.255.255.0
+	 ip add 10.31.100.2 255.255.255.0
 	 description VOICEVLAN
 
 !@@@LeafSwitchONLY
