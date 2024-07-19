@@ -271,6 +271,7 @@ spanning-tree BackBoneFast
 spanning-tree portfast bpduguard default
 Int Range fa0/1-8
    spanning-tree Portfast
+
 @BABA:
 config t
 spanning-tree Mode Rapid-pvst
@@ -293,6 +294,7 @@ int fa 0/7
 end
 
 TASK11: Multiple instance STP: 802.1s
+Make Force all CPU/Instance work to protect VLANs, cpu0 = is working
 step1: sync all Vlans with VTP:vlanTrunkingProtocol:
 TAAS/BABA: d1/d2:
 config t
