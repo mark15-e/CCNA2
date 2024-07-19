@@ -328,7 +328,7 @@ BABA: sh vlan brief:
 cpu1: vlan 11-19
 cpu2: vlan 21-29
 cpu3: vlan 31-39
-@TAAs/BABA:
+@TAAs/BABA: D1,D2,A1,A2
 CONFIG T
 spanning-tree mode Mst
 spanning-tree mst configuration
@@ -412,7 +412,7 @@ config t
 hostname PLDTITO
 Track 1 Int gi 0/1 line-protocol
 Int vlan 1
-standby 1 ip 10.__.1.6
+standby 1 ip 10.31.1.6
 standby 1 preempt
 standby 1 Priority 150
 standby 1 Track 1 decrement 60
@@ -430,7 +430,7 @@ COREBABA/GLOBE:
 config t
 hostname GLOBEITO
 Int vlan 1
-standby 1 ip 10.__.1.6
+standby 1 ip 10.31.1.6
 standby 1 preempt
 standby 1 Priority 100
 
@@ -472,7 +472,7 @@ Int Range fa0/10-12
  channel-group 1 mode active
  channel-protocol Lacp
  do sh etherchannel summary
- do sh int po1 | inc BW
+ do sh int po 1 | inc BW
 
 TASK18: HOW TO RETAIN ALL THE INFORMATION:
 run RSThayup: switchingLAB
